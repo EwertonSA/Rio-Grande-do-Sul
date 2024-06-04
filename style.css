@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header {
+    background: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.carousel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 60px; /* Espaço para o cabeçalho */
+    margin-bottom: 60px; /* Espaço para o rodapé */
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+    position: relative;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    display: block;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Ajuste conforme necessário */
+}
+.card2{
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 35%; /* Ajuste o tamanho do card conforme necessário */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+:hover .card2{
+    border: 2px solid black;
+    transition: 0.2s;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 35%; /* Ajuste o tamanho do card conforme necessário */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+:hover .card{
+    border: 2px solid black;
+    transition: 0.2s;
+}
+.card .img {
+    width: 100%; /* Ajusta a largura do contêiner da imagem */
+    display: flex;
+    justify-content: center;
+}
+
+.card .img img {
+    max-width: 100%;
+    height: auto;
+    width: auto; /* Evita que a imagem ultrapasse os limites do contêiner */
+    max-height: 200px; /* Ajuste conforme necessário para limitar a altura da imagem */
+}
+.card2 img{
+    max-width: 100%;
+    height: auto;
+    width: auto; /* Evita que a imagem ultrapasse os limites do contêiner */
+    max-height: 200px;
+}
+
+
+.footer {
+    background: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
